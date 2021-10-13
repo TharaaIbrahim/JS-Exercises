@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <select name="select" id="selector"> 
+      <option value="https://iber.or.id/wp-content/themes/consultix/images/no-image-found-360x250.png">Select</option>
+    <option value="https://www.flaginstitute.org/wp/wp-content/uploads/2015/05/Norway.png">Norway</option>
+    <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/2000px-Flag_of_Jordan.svg.png">Jordan</option>
+    </select><br>
+   <img id="image" src="https://iber.or.id/wp-content/themes/consultix/images/no-image-found-360x250.png">
+
+    <script>
+    let select=document.getElementById("selector");
+    select.addEventListener('change',()=>{
+        let image=document.getElementById("image");
+        image.src=select.value;
+    });
+    </script>
+</body>
+</html>

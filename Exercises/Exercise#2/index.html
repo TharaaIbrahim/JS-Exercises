@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script>
+        let box=document.querySelector("div");
+        let colors=['blue','red','green']
+        box.style.background=colors[Math.floor(Math.random()*colors.length)];
+        box.addEventListener('click',() =>{
+            if(box.style.background==="blue"){
+            box.style.background="red";
+            }else if(box.style.background==="red"){
+                box.style.background="green";
+            }else{
+                box.style.background="blue";
+            }
+        
+        });
+    </script>
+</body>
+</html>
